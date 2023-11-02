@@ -70,18 +70,24 @@ public class EmployeeDatabase {
         double highestSalary = 0;
         Employee highestPaidManager = null;
         for (Employee employee : employees) {
-            if (employee.department.equalsIgnoreCase("Purchase")
-                    && employee.designation.equalsIgnoreCase("Manager")
+            if (employee.department.equalsIgnoreCase("Purchase")  && employee.designation.equalsIgnoreCase("Manager")
                     && employee.salary >= highestSalary) {
                 highestSalary = employee.salary;
                 highestPaidManager = employee;
             }
         }
-        if (highestPaidManager != null) {
-            System.out.println("Highest paid manager in the Purchase Department: " + highestPaidManager);
-        } else {
-            System.out.println("No manager found in the Purchase Department.");
+        if (highestPaidManager != null)  System.out.println("Highest paid manager in the Purchase Department: " + highestPaidManager);
+        else System.out.println("No manager found in the Purchase Department.");
+        
+     System.out.println("Hiking the salaries of all the Employees of 'Sales' Department by 10%");
+     for(int i=0; i<3; i++){
+        if(employees[i].department.equalsIgnoreCase("Sales")){
+            employees[i].salary+=employees[i].salary*0.10;
+            System.out.println("New Salary of Employee "+(i+1)+" is "+employees[i].salary);
         }
+     }
+    
     }
 }
+
 
