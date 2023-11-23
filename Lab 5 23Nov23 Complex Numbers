@@ -1,5 +1,5 @@
 /* Lab 5 - Write a Java program to perform different operations on complex numbers, namely 
- * Add, Subtract, Increment and Decrement. Use Constructors
+ * Add, Subtract, Increment and Decrement. Use Constructors and create functions for doing these operations.
  */
 
 import java.util.Scanner;
